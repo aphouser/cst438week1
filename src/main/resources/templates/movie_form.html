@@ -10,7 +10,17 @@
   <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"> </span> <br />
   Reviewer: <input type="text" th:field="*{reviewer}" />
   <span th:if="${#fields.hasErrors('reviewer')}" th:errors="*{reviewer}"> </span> <br />
-  Rating: <input type="text" th:field="*{rating}" />
+  Rating:
+  <input type="radio" th:field="*{rating}" id="rate1" name="rate" value="1">
+  <label for="rate1">1</label>
+  <input type="radio" th:field="*{rating}" id="rate2" name="rate" value="2">
+  <label for="rate2">2</label>
+  <input type="radio" th:field="*{rating}" id="rate3" name="rate" value="3">
+  <label for="rate3">3</label>
+  <input type="radio" th:field="*{rating}" id="rate4" name="rate" value="4">
+  <label for="rate4">4</label>
+  <input type="radio" th:field="*{rating}" id="rate5" name="rate" value="5">
+  <label for="rate5">5</label><br>
   <span th:if="${#fields.hasErrors('rating')}" th:errors="*{rating}"> </span> <br />
   <input type="submit" value="Submit" />
 </form>
